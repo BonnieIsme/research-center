@@ -14,6 +14,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    pageTopHeight: wx.getSystemInfoSync().statusBarHeight+7+30+5
   }
 })

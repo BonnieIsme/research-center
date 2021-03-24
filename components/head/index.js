@@ -8,6 +8,10 @@ Component({
     text:{
       type:String,
       value:""
+    },
+    showLeft:{
+      type:Boolean,
+      value:false
     }
   }
 })

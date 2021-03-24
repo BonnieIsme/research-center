@@ -1,11 +1,22 @@
 // pages/order/order.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    pageTopHeight: wx.getSystemInfoSync().statusBarHeight+7+30+5
+    pageTopHeight: app.globalData.pageTopHeight,
+    list:[
+      {
+        id:123,
+        src:"https://dummyimage.com/400X300/2a7ce8/fff",
+        title:"自我认知+学业规划",
+        subtitile:"个性化指定孩子的学业规划建议",
+        price:2980.00,
+        oldPrice:2980.00
+      }
+    ]
   },
 
   /**
@@ -64,3 +75,4 @@ Page({
 
   }
 })
+

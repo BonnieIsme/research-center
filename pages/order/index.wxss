@@ -1,1 +1,49 @@
 /* pages/order/order.wxss */
+@import '../../app.wxss';
+.my-sell {
+  color: #de4b4e;
+  font-size: 16px;
+  position: relative;
+}
+
+.goods-list {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-item {
+  width: calc(100vw - 20px);
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 3px 1.5px #aaa;
+}
+
+.item-picture {
+  width: 400px;
+  height: 300px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #a3a3a3;
+}
+
+.item-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 14px;
+  color: #a3a3a3;
+}

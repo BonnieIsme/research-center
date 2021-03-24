@@ -1,5 +1,21 @@
 <!--pages/order/order.wxml-->
-<head text="预约"></head>
-<view class="order" style="padding-top:{{pageTopHeight}}px">
-kkkkk</view>
-<tab-bar></tab-bar>
+<head text="预约" showLeft="true"></head>
+<view class="container" style="padding-top:{{pageTopHeight}}px">
+ <view wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" class="goods-list">
+  <view class="goods-item">
+    <text class="iconfont icon_sell my-sell"></text>
+    <image src="{{item.src}}" class="item-picture" bindtap="toDetails"></image>
+    <view class="titles">
+     <view class="titile">{{item.title}}</view>
+     <view class="subtitile">{{item.subtitile}}</view>
+    </view>
+    <view class="item-bottom">
+      <view class="price">
+        <text>￥{{item.price}}</text>/次
+        <text class="old-price">￥{{item.oldPrice}}</text>
+      </view>
+      <button class="order-botton" bindtap="toOrder">立即预约</button>
+    </view>
+  </view>
+ </view>
+</view>
