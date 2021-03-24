@@ -1,0 +1,4 @@
+<!--components/head/index.wxml-->
+<view class="head" style="padding-top:{{paddingTopNum}}px;">
+  <text>{{text}}</text>
+</view>
