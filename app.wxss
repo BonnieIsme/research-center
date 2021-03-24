@@ -8,16 +8,21 @@
   url('//at.alicdn.com/t/font_2442040_mmhwtwv6w9.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_2442040_mmhwtwv6w9.svg#iconfont') format('svg');
 }
-.icon-order::before{
-  content: "\e7af";
-  font-family: "iconfont";
+
+.iconfont {
+  font-family: "iconfont" !important;
   font-size: 16px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-.icon-index::before{
+.icon_order::before{
+  content: "\e7af";
+ 
+}
+
+.icon_index::before{
   content: "\e7cb";
-  font-family: "iconfont";
-  font-size: 16px;
 }
 
 .container {

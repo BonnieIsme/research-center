@@ -1,3 +1,5 @@
 <!--pages/order/order.wxml-->
 <head text="预约"></head>
-<view class="order" style="padding-top:{{pageTopHeight}}px"></view>
+<view class="order" style="padding-top:{{pageTopHeight}}px">
+kkkkk</view>
+<tab-bar></tab-bar>

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "head":"../../components/head/index"
+    "head":"../../components/head/index",
+    "tab-bar":"../../components/tabBar/index"
   }
 }

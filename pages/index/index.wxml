@@ -1,5 +1,6 @@
 <!-- 首页 -->
 <head text="首页"></head>
-<view class="body" style="padding-top: {{pageTopHeight}}px">
+<view class="container" style="padding-top: {{pageTopHeight}}px">
   hhhh
+  <tab-bar></tab-bar>
 </view>

@@ -1,8 +1,8 @@
 <!--components/bottomBar/index.wxml-->
-<cover-view class="tab-bar">
-  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-index="{{index}}" style="color:{{ select === index ? selectedColor : color }}"
+<view class="tab-bar">
+  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-index="{{index}}"  data-path="{{ item.path }}" style="color:{{ select === index ? selectedColor : color }}"
   bindtap="switchTab">
-    <icon class="icon-{{ item.tag }}" ></icon>
-    <cover-view>{{ item.text }}</cover-view>
-  </cover-view>
-</cover-view>
+    <text class="iconfont icon_{{item.tag}}" ></text>
+    <view>{{ item.text }}</view>
+  </view>
+</view>

@@ -8,12 +8,12 @@ Component({
       {
         tag:"index",
         text:"首页",
-        pagePath:"/pages/index/index"
+        path:"pages/index/index",
       },
       {
         tag:"order",
         text:"预约",
-        pagePath:"/pages/order/index"
+        path:"pages/order/index"
       }
     ]
   },
@@ -21,8 +21,10 @@ Component({
  methods:{
   switchTab(e){
     const data = e.currentTarget.dataset;
-    const url = data.pagePath;
-    wx.switchTab({ url });
+    const url = data.path;
+    wx.switchTab({
+      url: url
+    })
     this.setData({
       select:data.index
     })
