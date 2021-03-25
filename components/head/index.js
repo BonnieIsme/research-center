@@ -20,6 +20,7 @@ Component({
   },
   methods:{
     navigatorTo(){
+      let index = this.properties.
       wx.navigateTo({
         url:this.properties.url[0],
       })
