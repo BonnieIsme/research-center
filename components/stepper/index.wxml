@@ -1,0 +1,5 @@
+<view class="stepper">
+  <view class="minus" hover-class="hover-btn" bindtap="minus">-</view>
+  <input class="input" type="text" name="stepper" value="{{value}}" bindinput="changeValue"/>
+  <view class="plus" hover-class="hover-btn" bindtap="plus">+</view>
+</view>

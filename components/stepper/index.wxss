@@ -1,0 +1,36 @@
+/* components/stepper/index.wxss */
+.stepper {
+  width: 100px;
+  height: 28px;
+  display: flex;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.minus,
+.plus {
+  width: 32px;
+  height: 28px;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dddddd;
+}
+.hover-btn {
+  color: #d4d0d0;
+  box-shadow: 0 0 5px #d4d0d0;
+}
+
+.input {
+  flex: 1;
+  height: inherit;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+}

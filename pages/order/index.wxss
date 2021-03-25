@@ -30,34 +30,37 @@
 }
 
 .title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight:550;
   color: #4a4a4a;
+  padding: 0 5px;
 }
 
 .subtitle {
    color: #a3a3a3;
   margin: 5px 0;
   font-size: 12px;
+  padding: 0 5px;
 }
 
 .item-bottom {
   display: flex;
+  padding: 0 5px;
   justify-content: space-between;
 }
 
 .price {
   font-size: 12px;
-  color: #a3a3a3;
+  color: #de4b4e;
   letter-spacing: 0.5px;
 }
 
 .sell-price  {
-  color: #de4b4e;
   font-size: 16px;
 }
 
 .old-price {
+  color: #a3a3a3;
   text-decoration-line: line-through;
 }
 

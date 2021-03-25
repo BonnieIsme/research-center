@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/order/index",
     "pages/order/check/index",
-    "pages/order/details/index"
+    "pages/order/details/index",
+    "components/stepper/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -32,6 +33,7 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "head": "./components/head/index"
+    "head": "./components/head/index",
+    "stepper":"./components/stepper/index"
   }
 }

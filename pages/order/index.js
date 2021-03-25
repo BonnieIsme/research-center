@@ -39,7 +39,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(app.globalData.orderToCheck);
   },
 
   /**
@@ -91,13 +91,16 @@ Page({
 
   },
 
+  // 到详情页
   toDetails(){
     wx.navigateTo({
       url: '/pages/order/details/index',
     })
   },
 
+  // 预约页到结账页，设置orderToCheck为true
   toCheck(){
+    app.globalData.orderToCheck = true;
     wx.navigateTo({
       url: '/pages/order/check/index',
     })

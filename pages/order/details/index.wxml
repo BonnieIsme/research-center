@@ -1,5 +1,45 @@
 <!--pages/order/details/index.wxml-->
-<head text="详情页" showLeft="true"></head>
-<view class="container" style="padding-top:{{pageTopHeight}}px">
-  jjjj
+<head text="详情页" showLeft="true" url="/pages/order/index"></head>
+<view class="container" style="padding-top:{{pageTopHeight}}px;background-color:#f6f6f6;height:100vh">
+
+  <view class="list">
+    <view class="goods-item">
+    <text class="iconfont icon_sell item-sell"></text>
+    <image src="{{item.src}}" class="item-picture" bindtap="toDetails" style="border-radius:4px"></image>
+    <view class="titles">
+     <view class="title" style="display:flex;justify-content:space-between;">
+       <view>{{item.title}}</view>
+       <view class="iconfont icon_share" style="display:inline-block;font-size:18px">
+       </view>
+    </view>
+     <view class="subtitle">{{item.subtitile}}</view>
+    </view>
+    <view class="item-bottom">
+      <view class="price">
+        <text class="sell-price">￥{{item.price}}</text><text style="font-size:12px">/次</text>
+        <text class="old-price">￥{{item.oldPrice}}</text>
+      </view>
+    </view>
+    </view>
+  </view>
+
+     <view class="service-details">
+      <view class="service-title">
+        <view class="gap"></view>
+        服务详情
+      </view>
+      <view class="service-des">
+        {{item.description}}
+      </view>
+    </view> 
+  
+   
+  <view class="botton-groups">
+    <view class="tel">
+      <view class="iconfont icon_tel" style="font-size:16px"></view>
+      <view>电话</view>
+    </view>
+    <view class="order-botton" bindtap="toCheck">立即预约</view>
+  </view>
+  
 </view>

@@ -1,1 +1,65 @@
 /* pages/order/details/index.wxss */
+@import '../../../app.wxss';
+@import '../../order/index.wxss';
+.service-details {
+  margin: 0 10px;
+  padding: 5px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.service-title {
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px #eceaea solid;
+}
+
+.gap {
+  content: " ";
+  width: 3px;
+  height: 21px;
+  margin-right:10px;
+  background-color: black;
+  border-radius: 25%;
+  display: inline-block;
+}
+
+.service-des {
+  color: #a3a3a3;
+  font-size: 14px;
+  padding: 5px 5px 15px 5px;
+  line-height: 24px;
+}
+
+.botton-groups {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  width: 100vw;
+  height: 50px;
+  padding: 5px 0;
+  justify-content: space-around;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.tel {
+  width: 20vw;
+  color: #525252;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-botton {
+  flex: 1;
+  height: 40px;
+  margin: 2px 4px;
+  border-radius: 25px;
+}
