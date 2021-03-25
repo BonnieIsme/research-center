@@ -12,6 +12,17 @@ Component({
     showLeft:{
       type:Boolean,
       value:false
+    },
+    url:{
+      type:Array,
+      value:[]
+    }
+  },
+  methods:{
+    navigatorTo(){
+      wx.navigateTo({
+        url:this.properties.url[0],
+      })
     }
   }
 })

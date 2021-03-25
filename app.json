@@ -1,10 +1,12 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/order/index"
+    "pages/order/index",
+    "pages/order/check/index",
+    "pages/order/details/index"
   ],
-  "window":{
-    "navigationBarTextStyle":"white",
+  "window": {
+    "navigationBarTextStyle": "white",
     "navigationStyle": "custom"
   },
   "tabBar": {
@@ -30,6 +32,6 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "head":"./components/head/index"
+    "head": "./components/head/index"
   }
 }

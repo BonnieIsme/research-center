@@ -1,5 +1,5 @@
 <!--components/head/index.wxml-->
 <view class="head" style="padding-top:{{paddingTopNum}}px;">
-  <text class="iconfont icon_left_arrow" wx:if="{{showLeft}}" style="margin-right:10px"></text>
+  <text class="iconfont icon_left_arrow" wx:if="{{showLeft}}" style="margin-right:10px" bindtap="navigatorTo"></text>
   <text>{{text}}</text>
 </view>

@@ -1,0 +1,6 @@
+<!--pages/order/check/index.wxml-->
+<head text="订单结算" showLeft="true" url="{{path}}"></head>
+<view class="container" style="padding-top:{{pageTopHeight}}px">
+  jjjj
+</view>
+

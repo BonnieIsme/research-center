@@ -1,0 +1,5 @@
+<!--pages/order/details/index.wxml-->
+<head text="详情页" showLeft="true"></head>
+<view class="container" style="padding-top:{{pageTopHeight}}px">
+  jjjj
+</view>

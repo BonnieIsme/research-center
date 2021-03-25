@@ -1,6 +1,6 @@
 <!-- 首页 -->
 <head text="首页"></head>
-<view class="container" style="padding-top: {{pageTopHeight}}px;background-color:black">
+<view class="container" style="padding-top: {{pageTopHeight}}px;background-color: #f6f6f6;">
   <image class="pictures" wx:for="{{list}}" wx:key="index" src="{{item.addr}}">
   </image>
 </view>
