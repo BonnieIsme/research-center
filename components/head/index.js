@@ -21,19 +21,16 @@ Component({
   },
   methods:{
     turnTo(){
-      console.log(this.properties.url);
-      console.log(app.globalData.orderToCheck);
-      if(this.properties.url === "/pages/order/details/index"){
-        wx.navigateTo({
-          url: this.properties.url,
-        })
+      if(app.globalData.orderToCheck === false){
+        let detailsIndex = getCurrentPages().findIndex(item => item.route == "pages/order/details/index")
+        app.globalData.orderToCheck = true;
+        wx.navigateBack({
+          delta: detailsIndex,
+        });
       }else{
-        if(this.properties.url === "/pages/order/index"){
-          app.globalData.orderToCheck = false;
-        }
         wx.switchTab({
-          url: this.properties.url,
-        })
+        url: this.properties.url,
+      })
       }
     }
   }
