@@ -1,59 +1,58 @@
 // pages/order/order.js
+import API from '../../utils/api'
 const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     pageTopHeight: app.globalData.pageTopHeight,
-    list:[
-      {
-        id:123,
-        src:"https://dummyimage.com/400X300/2a7ce8/fff",
-        title:"自我认知+学业规划",
-        subtitile:"个性化指定孩子的学业规划建议",
-        price:2980.00,
-        oldPrice:2980.00
-      },
-      {
-        id:123,
-        src:"https://dummyimage.com/400X300/2a7ce8/fff",
-        title:"自我认知+学业规划",
-        subtitile:"个性化指定孩子的学业规划建议",
-        price:2980.00,
-        oldPrice:2980.00
-      },
-      {
-        id:123,
-        src:"https://dummyimage.com/400X300/2a7ce8/fff",
-        title:"自我认知+学业规划",
-        subtitile:"个性化指定孩子的学业规划建议",
-        price:2980.00,
-        oldPrice:2980.00
-      },
-    ]
+    pageIndex:1,
+    list:[],
+    // list:[
+    //   {
+    //     id:123,
+    //     src:"https://dummyimage.com/400X300/2a7ce8/fff",
+    //     title:"自我认知+学业规划",
+    //     subtitile:"个性化指定孩子的学业规划建议",
+    //     price:2980.00,
+    //     oldPrice:2980.00
+    //   },
+    //   {
+    //     id:123,
+    //     src:"https://dummyimage.com/400X300/2a7ce8/fff",
+    //     title:"自我认知+学业规划",
+    //     subtitile:"个性化指定孩子的学业规划建议",
+    //     price:2980.00,
+    //     oldPrice:2980.00
+    //   },
+    //   {
+    //     id:123,
+    //     src:"https://dummyimage.com/400X300/2a7ce8/fff",
+    //     title:"自我认知+学业规划",
+    //     subtitile:"个性化指定孩子的学业规划建议",
+    //     price:2980.00,
+    //     oldPrice:2980.00
+    //   },
+    // ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('order-page',app.globalData.orderToCheck);
+    this.setGoods(this.pageIndex);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**
@@ -103,6 +102,16 @@ Page({
     app.globalData.orderToCheck = true;
     wx.navigateTo({
       url: '/pages/order/check/index',
+    })
+  },
+
+  // 设置商品列表
+  setGoods(index){
+    API.getGoods(index).then(res =>{
+      // this.setData({
+      //   list: res.data.data.records
+      // })
+      console.log(res);
     })
   }
 })
