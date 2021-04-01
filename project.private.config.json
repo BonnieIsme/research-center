@@ -11,7 +11,20 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "pages/order/check/index",
+          "pathName": "pages/order/check/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/index",
+          "pathName": "pages/order/index",
+          "query": "",
+          "scene": null
+        }
+      ]
     }
   }
 }

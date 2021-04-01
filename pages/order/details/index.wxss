@@ -2,6 +2,7 @@
 @import '../../../app.wxss';
 @import '../../order/index.wxss';
 .service-details {
+  width: 100%;
   margin: 0 10px;
   padding: 5px;
   font-size: 16px;

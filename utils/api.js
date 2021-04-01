@@ -10,7 +10,7 @@ const http = function(config = {}){
       url: baseUrl +　config.url,
       data: config.data,
       header: config.header,
-      method: config.header,
+      method: config.method,
       timeout: 10000,
       complete: (res) => {
         wx.hideLoading();
@@ -33,11 +33,29 @@ const http = function(config = {}){
 
 function getGoods(params){
   return http({
-    url:`/goods?current=${params}`,
+    url:`/goods?current=${params}&size=${300}`,
     data:null,
     method:'GET'
   })
 }
+
+function postOrderForm(data){
+  return http({
+    url:'/order',
+    data,
+    method:'POST'
+  })
+}
+
+function postCheckOrdered(data){
+  return http({
+    url:'/order/order_check',
+    data,
+    method:'POST'
+  })
+}
 module.exports = {
-  getGoods
+  getGoods,
+  postOrderForm,
+  postCheckOrdered
 }

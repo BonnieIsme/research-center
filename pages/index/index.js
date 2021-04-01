@@ -1,7 +1,6 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
 Page({
   data: {
    pageTopHeight: app.globalData.pageTopHeight,
@@ -11,8 +10,6 @@ Page({
      {addr:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fm.imeitou.com%2Fuploads%2Fallimg%2F2021012218%2Fgwdqycegim1.jpg&refer=http%3A%2F%2Fm.imeitou.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619190768&t=2b662965b1587ea7a27de5e42a975727"}
    ]
   },
- 
-  
- 
+
 })
 

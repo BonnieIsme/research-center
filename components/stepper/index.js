@@ -21,7 +21,9 @@ Component({
          value:this.properties.post
        })
      }
-     console.log(`现在数量为${this.data.value}`);
+     this.triggerEvent('changeQuantity',{
+      value:this.data.value
+    })
     },
 
     // 增加
@@ -30,7 +32,9 @@ Component({
       this.setData({
         value:this.properties.post
       })
-      console.log(`现在数量为${this.data.value}`);
+      this.triggerEvent('changeQuantity',{
+        value:this.data.value
+      })
     },
 
     // 输入框改变
@@ -38,7 +42,9 @@ Component({
       this.setData({
         value:e.detail.value
       })
-      console.log(`现在数量为${this.data.value}`);
+      this.triggerEvent('changeQuantity',{
+        value:this.data.value
+      })
     }
   }
 })
