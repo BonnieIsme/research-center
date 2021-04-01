@@ -14,7 +14,7 @@
         <text class="sell-price">￥{{item.newPrice}} </text><text style="font-size:12px;color:#de4b4e">/次</text>
         <text class="old-price">￥{{item.oldPrice}}</text>
       </view>
-      <view class="order-botton" bindtap="toCheck" data-element="{{item}}">立即预约</view>
+      <view class="order-botton" bindtap="toCheck" data-element="{{item}}">立即下单</view>
     </view>
   </view>
  </view>

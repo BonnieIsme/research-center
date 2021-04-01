@@ -1,6 +1,6 @@
 <!--pages/order/check/index.wxml-->
 <head text="订单结算" showLeft="true" url="{{flag === true ? pathToOrder : pathToDetail}}"></head>
-<view class="container" style="padding-top:{{pageTopHeight}}px;background-color:#f6f6f6;height:100vh">
+<view class="container" style="padding-top:{{pageTopHeight}}px;background-color:#f6f6f6;height:85vh">
   <view class="check-item pd-ten">
     <view class="check-img" style="background-image:url({{item.image}})">
       <text class="iconfont icon_sell item-sell"></text>
