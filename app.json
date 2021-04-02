@@ -4,7 +4,10 @@
     "pages/order/index",
     "pages/order/check/index",
     "pages/order/details/index",
-    "components/stepper/index"
+    "components/stepper/index",
+    "pages/profile/index",
+    "pages/order/had_pay/index",
+    "pages/order/no_pay/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -27,6 +30,12 @@
         "iconPath": "images/order.png",
         "selectedIconPath": "images/ordered.png",
         "text": "预约"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mined.png",
+        "text": "我的"
       }
     ]
   },
@@ -34,6 +43,6 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "head": "./components/head/index",
-    "stepper":"./components/stepper/index"
+    "stepper": "./components/stepper/index"
   }
 }

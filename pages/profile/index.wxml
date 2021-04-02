@@ -1,0 +1,33 @@
+<!--pages/profile/index.wxml-->
+<head text="我的"></head>
+<view class="container" style="padding-top:{{pageTopHeight}}px">
+ <view class="list">
+  <block wx:if="{{!hasUserInfo}}">
+    <view class="user-info">
+      <view class="user-avatar-default"></view>
+    </view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserProfile">授权登录</button>
+  </block>
+  <block wx:else>
+    <view class="user-info">
+      <view class="user-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="user-id">
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+    <view class="user-order">
+      <view class="my-button">
+        <view class="btn-text">已支付订单</view>
+        <view class="iconfont icon-paid"></view>
+      </view>
+      <view class="my-button">
+        <view class="btn-text">未支付订单</view>
+        <view class="iconfont icon-prepay"></view>
+      </view>
+    </view>
+  </block>
+ 
+ </view>
+</view>

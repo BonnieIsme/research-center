@@ -1,6 +1,6 @@
 <!--pages/order/details/index.wxml-->
 <head text="详情页" showLeft="true" url="/pages/order/index"></head>
-<view class="container" style="padding-top:{{pageTopHeight}}px;background-color:#f6f6f6;height:80vh">
+<view class="container" style="padding-top:{{pageTopHeight}}px;background-color:#f6f6f6;">
   <view class="list">
     <view class="goods-item">
     <text class="iconfont icon_sell item-sell"></text>
