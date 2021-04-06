@@ -1,4 +1,4 @@
-const baseUrl = "http://192.168.2.211:8888"
+// const baseUrl = "http://192.168.2.211:8888"
 
 const http = function(config = {}){
   wx.showLoading({
@@ -7,7 +7,8 @@ const http = function(config = {}){
   })
   return new Promise((resolve,reject)=>{
     wx.request({
-      url: baseUrl +　config.url,
+      // url: baseUrl +　config.url,
+      url:"https://www.fastmock.site/mock/5855106367e56d270345fd48f06cf206/goods",
       data: config.data,
       header: config.header,
       method: config.header,
@@ -38,6 +39,6 @@ function getGoods(params){
     method:'GET'
   })
 }
-module.exports = {
+export default {
   getGoods
 }
