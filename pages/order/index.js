@@ -1,118 +1,86 @@
 // pages/order/order.js
-import API from '../../utils/api'
+const API = require('../../utils/api');
 const app = getApp();
+let page = 1;
+let hasReachBottom = false;
 Page({
   data: {
     pageTopHeight: app.globalData.pageTopHeight,
-    pageIndex:1,
     list:[],
-    // list:[
-    //   {
-    //     id:123,
-    //     src:"https://dummyimage.com/400X300/2a7ce8/fff",
-    //     title:"自我认知+学业规划",
-    //     subtitile:"个性化指定孩子的学业规划建议",
-    //     price:2980.00,
-    //     oldPrice:2980.00
-    //   },
-    //   {
-    //     id:123,
-    //     src:"https://dummyimage.com/400X300/2a7ce8/fff",
-    //     title:"自我认知+学业规划",
-    //     subtitile:"个性化指定孩子的学业规划建议",
-    //     price:2980.00,
-    //     oldPrice:2980.00
-    //   },
-    //   {
-    //     id:123,
-    //     src:"https://dummyimage.com/400X300/2a7ce8/fff",
-    //     title:"自我认知+学业规划",
-    //     subtitile:"个性化指定孩子的学业规划建议",
-    //     price:2980.00,
-    //     oldPrice:2980.00
-    //   },
-    // ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setGoods(this.pageIndex);
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-   
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-   
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  onLoad: function (options) { 
+    // 清空缓存,初次加载
+    // this.clearCache();
+    this.setGoods(1);
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    // 下拉刷新，清空缓存，加载第一次数据
+    // this.clearCache();
+    this.setData(1)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    this.setData(page)
   },
 
   // 到详情页
-  toDetails(){
+  toDetails(e){
+    const element = JSON.stringify(e.currentTarget.dataset.element);
     wx.navigateTo({
-      url: '/pages/order/details/index',
+      url: `/pages/order/details/index?element=${encodeURIComponent(element)}`,
     })
   },
 
   // 预约页到结账页，设置orderToCheck为true
-  toCheck(){
-    app.globalData.orderToCheck = true;
+  toCheck(e){
+    const element = JSON.stringify(e.currentTarget.dataset.element);
     wx.navigateTo({
-      url: '/pages/order/check/index',
+      url: `/pages/order/check/index?element=${encodeURIComponent(element)}`,
     })
+    app.globalData.orderToCheck = true;
   },
+
+  // 清空缓存
+  // clearCache(){
+  //   this.setData({
+  //     pageIndex:1, // 分页标识符归1
+  //     list:[]      // 列表内容清空
+  //   })
+  // },
 
   // 设置商品列表
   setGoods(index){
-    API.getGoods(index).then(res =>{
-      // this.setData({
-      //   list: res.data.data.records
-      // })
-      console.log(res);
+  const that = this;
+  if(hasReachBottom){
+    wx.showToast({
+      title: '没有更多数据了',
+      icon:'success'
     })
+    return;
+  }
+  API.getGoods(index).then(res => {
+    let array = res.data.data.records;
+    array.forEach(item => {
+      item.oldPrice = item.oldPrice.toFixed(2);
+      item.newPrice = item.newPrice.toFixed(2);
+    })
+    that.setData({
+      list:array
+    })
+  })
+   
+    
   }
 })
 

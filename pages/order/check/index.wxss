@@ -88,5 +88,15 @@
 
 .order-botton {
   flex: 1;
+}
 
+.shop-pay{
+  width: 100px;
+  font-size: 14px;
+}
+
+.item-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

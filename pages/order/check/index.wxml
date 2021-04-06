@@ -1,19 +1,18 @@
 <!--pages/order/check/index.wxml-->
 <head text="订单结算" showLeft="true" url="{{flag === true ? pathToOrder : pathToDetail}}"></head>
-<view class="container" style="padding-top:{{pageTopHeight}}px;background-color:#f6f6f6;height:100vh">
-
+<view class="container" style="padding-top:{{pageTopHeight}}px;background-color:#f6f6f6;">
   <view class="check-item pd-ten">
-    <view class="check-img" style="background-image:url({{item.src}})">
+    <view class="check-img" style="background-image:url({{item.image}})">
       <text class="iconfont icon_sell item-sell"></text>
     </view>
     <view class="check-text">
        <view class="title">
         <view>{{item.title}}</view>
          </view>
-        <view class="subtitle">{{item.subtitile}}</view>
+        <view class="subtitle">{{item.introduction}}</view>
     <view class="item-bottom">
       <view class="price">
-        <text class="sell-price">￥{{item.price}}</text><text style="font-size:12px">/次</text>
+        <text class="sell-price">￥{{item.newPrice}}</text><text style="font-size:12px">/次</text>
         <text class="old-price">￥{{item.oldPrice}}</text>
       </view>
       <view class="shop-pay" bindtap="shopPay">
@@ -27,7 +26,7 @@
     <form catchsubmit="formSubmit">
       <view class="quantity check-form">
         <view>数量</view>
-        <stepper post="{{item.quantity}}"></stepper>
+        <stepper post="{{quantity}}" bindchangeQuantity="changeQuantity"></stepper>
       </view>
       <!-- 姓名 -->
       <view class="check-person check-form">
@@ -35,7 +34,7 @@
           <view style="color:red;margin-right:5px">*</view>
           <view>姓名</view>
         </view>
-        <input name="clientName" value="{{item.name}}" placeholder="请输入姓名" placeholder-class="placeholder"class="check-input" bindinput="setName"/>
+        <input name="name" value="{{name}}" placeholder="请输入姓名" placeholder-class="placeholder"class="check-input" bindinput="setName"/>
       </view>
       <!-- 电话 -->
       <view class="check-person check-form">
@@ -43,25 +42,25 @@
           <view style="color:red;margin-right:5px">*</view>
           <view>电话</view>
         </view>
-        <input name="tel" value="{{item.tel}}" placeholder="请输入电话号码" placeholder-class="placeholder" class="check-input" bindinput="setTel"/>
+        <input name="tel" value="{{tel}}" placeholder="请输入电话号码" placeholder-class="placeholder" class="check-input" bindinput="setTel"/>
       </view>
       <!-- 买家留言 -->
       <view class="check-person check-form">
         <view class="check-title">
-          <view style="color:red;margin-right:5px">*</view>
           <view>买家留言</view>
         </view>
-        <textarea name="note" value="{{item.note}}" placeholder="请输入买家留言" class="check-area" bindinput="setNote"></textarea>
+        <textarea name="note" value="{{note}}" placeholder="请输入买家留言" placeholder-class="placeholder"  class="check-area" bindinput="setNote"></textarea>
       </view>
+      <view class="botton-groups">
+    <view class="total">
+     ￥{{total}}
+    </view>
+    <button class="order-botton" form-type="submit">提交订单</button>
+  </view>
     </form>
   
   
-  <view class="botton-groups">
-    <view class="total">
-     ￥{{item.total}}
-    </view>
-    <view class="order-botton" bindtap="toCheck">提交订单</view>
-  </view>
+  
   
 </view>
 
