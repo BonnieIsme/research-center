@@ -10,7 +10,7 @@ Page({
     pageTopHeight: app.globalData.pageTopHeight,
     pathToOrder:"/pages/order/index",
     pathToDetail:"/pages/order/details/index",
-    flag:app.globalData.orderToCheck,
+    flag:app.globalData.switchToTab,
     item:{},
     name:"",
     tel:"",

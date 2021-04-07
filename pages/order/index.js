@@ -1,7 +1,6 @@
 // pages/order/order.js
 const API = require('../../utils/api');
 const app = getApp();
-let page = 1;
 let hasReachBottom = false;
 Page({
   data: {
@@ -14,8 +13,7 @@ Page({
    */
   onLoad: function (options) { 
     // 清空缓存,初次加载
-    // this.clearCache();
-    this.setGoods(1);
+ 
   },
 
   /**
@@ -23,15 +21,14 @@ Page({
    */
   onPullDownRefresh: function () {
     // 下拉刷新，清空缓存，加载第一次数据
-    // this.clearCache();
-    this.setData(1)
+   
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.setData(page)
+  
   },
 
   // 到详情页
@@ -40,6 +37,7 @@ Page({
     wx.navigateTo({
       url: `/pages/order/details/index?element=${encodeURIComponent(element)}`,
     })
+    app.globalData.switchToTab = true;
   },
 
   // 预约页到结账页，设置orderToCheck为true
@@ -51,13 +49,6 @@ Page({
     app.globalData.orderToCheck = true;
   },
 
-  // 清空缓存
-  // clearCache(){
-  //   this.setData({
-  //     pageIndex:1, // 分页标识符归1
-  //     list:[]      // 列表内容清空
-  //   })
-  // },
 
   // 设置商品列表
   setGoods(index){

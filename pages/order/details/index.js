@@ -7,6 +7,9 @@ Page({
   data: {
     pageTopHeight: app.globalData.pageTopHeight,
     pageIndex:1,
+    flag : app.globalData.switchToTab,
+    pathToOrder:"/pages/order/index",
+    path:"",
     item:{}
   },
 
@@ -14,9 +17,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let path = options.path;
+    console.log(path);
+    console.log(app.globalData.switchToTab);
     let element = JSON.parse(decodeURIComponent(options.element));
     this.setData({
-      item:element
+      item:element,
+      path
     })
   },
 
@@ -25,6 +32,6 @@ Page({
     wx.navigateTo({
       url: `/pages/order/check/index?element=${encodeURIComponent(element)}`,
     });
-    app.globalData.orderToCheck = false;
+    app.globalData.switchToTab = false;
   },
 })

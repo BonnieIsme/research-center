@@ -21,9 +21,9 @@ Component({
   },
   methods:{
     turnTo(){
-      if(app.globalData.orderToCheck === false){
+      if(app.globalData.switchToTab === false){
         let detailsIndex = getCurrentPages().findIndex(item => item.route == "pages/order/details/index")
-        app.globalData.orderToCheck = true;
+        app.globalData.switchToTab = true;
         wx.navigateBack({
           delta: detailsIndex,
         });

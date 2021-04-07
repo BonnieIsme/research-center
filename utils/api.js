@@ -39,10 +39,6 @@ function getGoods(params){
     method:'GET'
   })
 }
-<<<<<<< HEAD
-export default {
-  getGoods
-=======
 
 function postOrderForm(data){
   return http({
@@ -59,9 +55,17 @@ function postCheckOrdered(data){
     method:'POST'
   })
 }
+
+function getToken(data){
+  return http({
+    url:'',
+    data,
+    method:'POST'
+  })
+}
 module.exports = {
   getGoods,
   postOrderForm,
-  postCheckOrdered
->>>>>>> 0608fb3708d00cc5a9d34a644b9aaa61071f7843
+  postCheckOrdered,
+  getToken
 }

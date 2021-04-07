@@ -1,1 +1,3 @@
 /* pages/order/had_pay/index.wxss */
+@import '../../../app.wxss';
+@import '../../order/index.wxss';

@@ -1,2 +1,20 @@
 <!--pages/order/had_pay/index.wxml-->
-<text>pages/order/had_pay/index.wxml</text>
+<head text="已支付" showLeft="true" url="/pages/profile/index"></head>
+<view class="container" style="padding-top:{{pageTopHeight}}px">
+  <view class="list" wx:for="{{list}}" wx:key="index">
+    <view class="goods-item"  bindtap="toDetails" data-element="{{item}}">
+    <text class="iconfont icon_sell item-sell"></text>
+    <image src="{{item.image}}" class="item-picture"style="border-radius:4px"></image>
+    <view class="titles">
+     <view class="title">{{item.title}}</view>
+     <view class="subtitle">{{item.introduction}}</view>
+    </view>
+    <view class="item-bottom">
+      <view class="price">
+        <text class="sell-price">￥{{item.newPrice}} </text><text style="font-size:12px;color:#de4b4e">/次</text>
+        <text class="old-price">￥{{item.oldPrice}}</text>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

@@ -1,1 +1,14 @@
 /* pages/order/no_pay/index.wxss */
+@import '../../../app.wxss';
+@import '../../order/index.wxss';
+
+.cancel-button {
+  background-color: #f0f0f0;
+  color: #404040;
+  margin: 0 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}

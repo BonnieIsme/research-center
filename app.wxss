@@ -50,10 +50,12 @@
 
 .icon_paid::before {
   content: '\e600';
+  
 }
 
 .icon_prepay::before {
   content: '\e601';
+ 
 }
 
 .list {

@@ -1,2 +1,67 @@
 /* pages/profile/index.wxss */
 @import '../../app.wxss';
+.user-info {
+  width: 100%;
+  height: 40vh;
+  background-color: #b0b0b0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.user-avatar-default {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  background-image: url('https://img.ixintu.com/download/jpg/202001/1d371b938046a5c4cd1b384f017b74eb.jpg!ys');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.user-id {
+  font-size: 14px;
+  color: #f0f0f0;
+}
+
+.user-order {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-button {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eceaea;
+  margin: 10px 0;
+}
+
+.btn-text {
+  font-size: 16px;
+  color: #404040;
+}
+
+.login-button {
+  position: relative;
+  top: 200px;
+  background-color: #f4393B;
+  color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
